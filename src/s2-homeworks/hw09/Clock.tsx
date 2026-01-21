@@ -66,18 +66,20 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={timerId !== undefined}
                     onClick={start}
                 >
                     start
                 </SuperButton>
+
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={timerId === undefined}
                     onClick={stop}
                 >
                     stop
                 </SuperButton>
+
             </div>
         </div>
     )
